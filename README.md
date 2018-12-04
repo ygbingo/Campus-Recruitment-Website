@@ -101,6 +101,9 @@ http://www.alauda.cn/about/join.html
 水滴互动：
 https://www.shuidihuzhu.com/tx/campus/
 
+优诺科技：
+https://app.mokahr.com/campus_apply/uinnova/3277
+
 医渡云：
 https://www.yiducloud.com.cn/join.html
 
