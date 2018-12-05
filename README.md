@@ -104,6 +104,9 @@ https://www.shuidihuzhu.com/tx/campus/
 优诺科技：
 https://app.mokahr.com/campus_apply/uinnova/3277
 
+魔门塔：
+https://app.mokahr.com/campus_apply/momenta/2563#/?anchorName=000&sourceToken=&_k=rg9nj4
+
 医渡云：
 https://www.yiducloud.com.cn/join.html
 
