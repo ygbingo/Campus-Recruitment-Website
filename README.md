@@ -1,5 +1,5 @@
 # Campus-Recruitment-Website
-Campus Recruitment Website 收录一些大公司的校园招聘官网，帮助投递简历与职位选择
+Campus Recruitment Website 收录一些大公司的校园招聘/校招/秋招/春招/实习生招聘官网，帮助投递简历与职位选择
 （陆续更新中...）
 
 阿里：
