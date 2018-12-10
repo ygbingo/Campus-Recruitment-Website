@@ -95,6 +95,9 @@ https://job.mogujie.com/#/campus?_k=pu7xzp
 转转：
 https://m.zhuanzhuan.com/platform/zzjob/index.html#/pc/campus/2019
 
+自如：
+https://special.ziroom.com/2018/zr-xzpc/index.html
+
 灵雀云：
 http://www.alauda.cn/about/join.html
 
