@@ -65,6 +65,9 @@ http://inspur.zhaopin.com/xyzp.html
 瓜子招聘：
 http://zhaopin.guazi.com/
 
+APUS：
+http://www.apusapps.com/en/jobs/
+
 猫眼娱乐：
 https://app.mokahr.com/campus_apply/maoyan#/?anchorName=000&sourceToken=&_k=oii11n
 
