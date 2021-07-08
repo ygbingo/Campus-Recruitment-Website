@@ -26,4 +26,4 @@ with open("jobs.json", "w") as f:
     json.dump(jobs, f, ensure_ascii=False)
     print("ok")
 
-print(jobs)
+jobs = json.loads(jobs)

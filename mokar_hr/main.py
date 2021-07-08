@@ -1,5 +1,6 @@
 import requests
 import json
+import datetime
 
 def get_all_jobs():
     url = "https://app.mokahr.com/api/outer/ats-jc-apply/website/jobs"
@@ -25,7 +26,7 @@ def get_all_jobs():
         json.dump(jobs, f, ensure_ascii=False)
         print("ok")
 
-    print(jobs)
+    return jobs
 
 def get_job_detail(jobId):
     url = "https://app.mokahr.com/api/outer/ats-jc-apply/website/job"
@@ -40,3 +41,34 @@ def get_job_detail(jobId):
     jobDescript = response["data"]["jobDescription"]
     print(jobDescript)
     return jobDescript
+
+def main(len=6):
+    jobs = get_all_jobs()
+    file = "jobs.md"
+    f = open(file, "w+")
+    f.write("# 投递模板 \n ### 邮箱 \n - 收件人: yanhuibin@xiaobing.ai \n - 主题：姓名-投递岗位-期望工作城市 \n - 内容：一句话介绍自己的优势 \n - 附件：个人简历.pdf \n")
+    f.write("![image.png](https://pic.leetcode-cn.com/1625711310-hXaXFw-image.png)\n")
+
+    for idx, job in enumerate(jobs):
+        createT = job["createdAt"]
+        jobId = job["id"]
+        titile = "# " + job["title"]
+        updatedAt = datetime.datetime.strptime(job["updatedAt"], "%Y-%m-%dT%H:%M:%S")
+        print(updatedAt)
+        jobDescribe = get_job_detail(jobId)
+        jobDescribe = jobDescribe.replace("<br>", "\n").replace("</p>", "\n").replace("<p>", "").replace("&nbsp;", " ")
+        
+        f.write(str(updatedAt) + "\n" + titile + "\n" + jobDescribe + "\n")
+
+        if idx > len:
+            break
+    
+    
+    f.close()
+    
+
+if __name__==main():
+    lastUpdate = datetime.datetime.now()
+    print(lastUpdate)
+
+    main()
