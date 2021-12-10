@@ -2,7 +2,10 @@ import requests
 import json
 import datetime
 
-def get_all_jobs():
+def get_all_xiaoice_jobs():
+    """
+    爬取岗位列表
+    """
     url = "https://app.mokahr.com/api/outer/ats-jc-apply/website/jobs"
     headers = {
     'Content-Type': 'application/json'
@@ -12,9 +15,9 @@ def get_all_jobs():
         "limit": 15,
         "needStat": True,
         "offset": 0,
-        "orgId": "xiaobing",
-        "site": "recommendation",
-        "siteId": 26610
+        "orgId": "xiaobing",  # 可替换
+        "site": "recommendation",  # 可替换
+        "siteId": 26610  # 可替换
     }
 
     response = requests.request("POST", url, headers=headers, data=json.dumps(payload))
@@ -29,6 +32,9 @@ def get_all_jobs():
     return jobs
 
 def get_job_detail(jobId):
+    """
+    爬取岗位细节
+    """
     url = "https://app.mokahr.com/api/outer/ats-jc-apply/website/job"
     headers = {
     'Content-Type': 'application/json',
@@ -47,7 +53,7 @@ def main(len=6):
     file = "jobs.md"
     f = open(file, "w+")
     f.write("# 投递模板 \n ### 邮箱 \n - 收件人: yanhuibin@xiaobing.ai \n - 主题：姓名-投递岗位-期望工作城市 \n - 内容：一句话介绍自己的优势 \n - 附件：个人简历.pdf \n")
-    f.write("![image.png](https://pic.leetcode-cn.com/1625711310-hXaXFw-image.png)\n")
+    f.write("![image.png](https://pic.leetcode-cn.com/1624438530-VfRJKP-image.png)\n")
 
     for idx, job in enumerate(jobs):
         createT = job["createdAt"]
